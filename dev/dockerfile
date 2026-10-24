@@ -7,8 +7,8 @@ COPY dev/start.sh /home/link
 RUN chmod +x /home/link/start.sh
 
 RUN apt install inotify-tools -y
-COPY dev/cheakdir.sh /home/link
-RUN chmod +x /home/link/cheakdir.sh
+COPY dev/checkdir.sh /home/link
+RUN chmod +x /home/link/checkdir.sh
 
 COPY dev/action.sh /home/link
 RUN chmod +x /home/link/action.sh

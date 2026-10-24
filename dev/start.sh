@@ -1,20 +1,5 @@
-# !/bin/bash
-cheak=echo "/home/link/cheakdir.sh"
-eval $check 
-echo ""
+#!/usr/bin/env bash
+set -e
 
-/usr/share/logstash/bin/logstash -f /etc/logstash/conf.d/logstash.conf
-echo ""
-
-cheak=echo "/home/link/cheakdir.sh"
-eval $check 
-echo ""
-
- 
-
-
-
-
-
-
-
+/home/link/checkdir.sh
+exec /usr/share/logstash/bin/logstash -f /etc/logstash/conf.d/logstash.conf

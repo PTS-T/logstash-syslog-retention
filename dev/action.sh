@@ -12,7 +12,7 @@ FILE_COUNT=$(ls -1 "$DIRECTORY" | wc -l)
 if [ "$FILE_COUNT" -gt "$NUMFILE" ]; then
     # ลบไฟล์ที่เก่าที่สุดในไดเรกทอรี
     find "$DIRECTORY" -type f -printf '%T+ %p\n' | sort | head -n 1 | cut -d' ' -f2 | xargs rm
-    echo "Deleted the oldest file because there are more than 31 files." >> /home/link/createdfile.log
+    echo "Deleted the oldest file because there are more than $NUMFILE files." >> /home/link/createdfile.log
     cat /home/link/createdfile.log
 else
     echo "There are $FILE_COUNT files. No need to delete any files." >> /home/link/createdfile.log
